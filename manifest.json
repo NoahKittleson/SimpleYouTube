@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "YTBlocker",
+  "description": "This extension deletes most things but the video on YouTube",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "YTStop.png",
+    "default_title": "SimpleYouTube"
+  },
+
+  "permissions": [
+    "webRequest"
+  ]
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
