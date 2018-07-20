@@ -16,7 +16,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 // chrome.webRequest.onHeadersReceived.addListener(
 // callback, filter);
 
-chrome.browserAction.onClicked.addListener(function(tab) {
+chrome.webRequest.onHeadersReceived.addListener(function(tab) {
   // Send a message to the active tab
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
     var activeTab = tabs[0];

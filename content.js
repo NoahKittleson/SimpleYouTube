@@ -1,4 +1,4 @@
-var comments = document.getElementById("Comments");
+svar comments = document.getElementById("Comments");
 items = document.getElementById("Items");
 if (comments) {
   comments.parentNode.removeChild(comments);
